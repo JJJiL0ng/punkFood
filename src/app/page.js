@@ -41,7 +41,14 @@ export default function Home() {
     }
   }
 
-  const handleShopClick = () => {
+  const handleShopClick = async () => {
+    try {
+      await addDoc(collection(db, 'shop_clicks'), {
+        timestamp: serverTimestamp(),
+      })
+    } catch (error) {
+      console.error('Error logging shop click:', error)
+    }
     window.location.href = '/comingSoon'
   }
 
@@ -82,7 +89,7 @@ export default function Home() {
             <div className="space-y-4">
               <p className="text-sm text-gray-600">Your discount code:</p>
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p className="text-2xl font-mono font-bold text-[#FC7E7A]">
+                <p className="text-2xl font-mono font-bold text-red-500">
                   {couponCode}
                 </p>
               </div>

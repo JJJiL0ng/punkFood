@@ -33,7 +33,7 @@ export default function Sorry() {
               Don&apos;t forget to save your exclusive discount code for our launch:
             </p>
             <div className="bg-gray-100 p-4 rounded-lg">
-              <p className="text-2xl font-mono font-bold text-[#FC7E7A]">
+              <p className="text-2xl font-mono font-bold text-red-500">
                 {couponCode}
               </p>
             </div>
