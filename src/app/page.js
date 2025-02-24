@@ -89,23 +89,12 @@ export default function Home() {
           </p>
 
           {!couponVisible ? (
-            <div className="space-y-4">
-              <button
-                onClick={handleGetDiscount}
-                className="btn-primary w-full"
-              >
-                Get Discount Code
-              </button>
-              <a
-                href="https://www.instagram.com/altmeat_official/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full flex items-center justify-center gap-2"
-              >
-                <FaInstagram className="text-xl" />
-                Follow us on Instagram
-              </a>
-            </div>
+            <button
+              onClick={handleGetDiscount}
+              className="btn-primary w-full"
+            >
+              Get Discount Code
+            </button>
           ) : (
             <div className="space-y-4">
               <p className="text-sm text-gray-600">Your discount code:</p>
@@ -125,6 +114,19 @@ export default function Home() {
               </button>
             </div>
           )}
+        </div>
+        
+        {/* Instagram Button */}
+        <div className="px-8 w-full">
+          <a
+            href="https://www.instagram.com/altmeat_official/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary w-full flex items-center justify-center gap-2"
+          >
+            <FaInstagram className="text-xl" />
+            Follow us on Instagram
+          </a>
         </div>
       </div>
     </div>
