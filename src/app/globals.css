@@ -5,15 +5,15 @@
 
 @layer base {
   :root {
-    --primary: #FC7E7A;
-    --primary-dark: #fb6c67;
+    --primary: #FF0000;
+    --primary-dark: #CC0000;
   }
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #FC7E7A 0%, #FF9B98 100%);
+  background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
 }
 
 .btn-primary {
-  @apply bg-[#FC7E7A] hover:bg-[#fb6c67] text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-200 ease-in-out hover:scale-105;
+  @apply bg-[#FF0000] hover:bg-[#CC0000] text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-200 ease-in-out hover:scale-105;
 }

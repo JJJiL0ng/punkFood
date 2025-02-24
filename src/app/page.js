@@ -26,7 +26,7 @@ if (typeof window !== 'undefined') {
 
 export default function Home() {
   const [couponVisible, setCouponVisible] = useState(false)
-  const [couponCode] = useState('RASABLY25')
+  const [couponCode] = useState('PUNK4U')
   const db = getFirestore(app)
 
   const handleGetDiscount = async () => {
@@ -41,20 +41,8 @@ export default function Home() {
     }
   }
 
-  const handleStoreClick = async (store) => {
-    try {
-      const docRef = await addDoc(collection(db, 'store_clicks'), {
-        storeType: store,
-        timestamp: serverTimestamp(),
-      })
-      console.log(`Successfully logged ${store} store click with ID: ${docRef.id}`)
-      // Firebase 저장이 완료된 후 페이지 이동
-      window.location.href = '/sorry'
-    } catch (error) {
-      console.error(`Error logging ${store} store click:`, error)
-      // 에러가 발생해도 페이지 이동
-      window.location.href = '/sorry'
-    }
+  const handleShopClick = () => {
+    window.location.href = '/comingSoon'
   }
 
   return (
@@ -63,7 +51,7 @@ export default function Home() {
         {/* Logo and Title */}
         <div className="space-y-4">
           <h1 className="text-4xl font-bold text-white">
-            RASABLY
+            PUNK FOOD
           </h1>
           <p className="text-xl text-white/90">
             Your Gateway to Korean Fashion<br />
@@ -101,29 +89,14 @@ export default function Home() {
               <p className="text-xs text-gray-500">
                 *Valid for your first purchase only
               </p>
+              <button
+                onClick={handleShopClick}
+                className="btn-primary w-full"
+              >
+                Go to Shop
+              </button>
             </div>
           )}
-        </div>
-
-        {/* Footer */}
-        <div className="space-y-4">
-          <p className="text-sm text-white/80">
-            Download the RASABLY app now
-          </p>
-          <div className="flex justify-center space-x-3 px-4">
-            <img
-              src="/app-store-badge.png"
-              alt="App Store"
-              className="h-12 w-auto cursor-pointer"
-              onClick={() => handleStoreClick('apple')}
-            />
-            <img
-              src="/google-play-badge.png"
-              alt="Google Play"
-              className="h-12 w-auto cursor-pointer"
-              onClick={() => handleStoreClick('google')}
-            />
-          </div>
         </div>
       </div>
     </div>
