@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'PUNK FOOD - Korean Fashion in India',
-  description: 'Your Gateway to Korean Fashion in India. Discover exclusive Korean fashion trends and get 25% off on your first order at PUNK FOOD.',
+  title: 'PUNK FOOD - Plant-based Restaurant',
+  description: 'At PUNK FOOD, we don&apos;t just go meatless—we go stronger. 💪',
 }
 
 export default function RootLayout({ children }) {
@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="theme-color" content="#FC7E7A" />
-        <meta name="keywords" content="Korean fashion, India fashion, K-fashion, Korean style, PUNK FOOD, fashion discount" />
-        <meta property="og:title" content="PUNK FOOD - Korean Fashion in India" />
-        <meta property="og:description" content="Your Gateway to Korean Fashion in India. Get 25% off on your first order!" />
+        <meta name="keywords" content="plant-based food, vegan restaurant, vegetarian food, healthy eating, PUNK FOOD, sustainable dining" />
+        <meta property="og:title" content="PUNK FOOD - Plant-based Restaurant" />
+        <meta property="og:description" content="At PUNK FOOD, we don't just go meatless—we go stronger. Experience revolutionary plant-based dining." />
         <meta property="og:type" content="website" />
       </head>
       <body className={`${inter.className} antialiased`}>

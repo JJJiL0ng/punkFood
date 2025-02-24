@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import Image from 'next/image'
+import { FaInstagram } from 'react-icons/fa'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -57,12 +59,18 @@ export default function Home() {
       <div className="max-w-md w-full space-y-8 text-center">
         {/* Logo and Title */}
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold text-white">
-            PUNK FOOD
-          </h1>
+          <div className="relative mx-auto" style={{ width: '256px', height: '192px' }}>
+            <Image
+              src="/PUNK FOOD LOGO.png"
+              alt="PUNK FOOD"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </div>
           <p className="text-xl text-white/90">
-            Your Gateway to Korean Fashion<br />
-            in India
+            At PUNK FOOD,<br />
+            we don&apos;t just go meatless—we go stronger. 💪
           </p>
         </div>
 
@@ -72,19 +80,32 @@ export default function Home() {
             Get 25% Off<br />
             Your First Order
           </h2>
-          
+
           <p className="text-gray-600">
-            Unlock exclusive access <br />
-            to trendy Korean fashion
+            🔥 No compromise on flavor.<br />
+            🔥 No compromise on style.<br />
+            🔥 Just bold, rebellious bites<br />
+             for those who live louder.
           </p>
 
           {!couponVisible ? (
-            <button
-              onClick={handleGetDiscount}
-              className="btn-primary w-full"
-            >
-              Get Discount Code
-            </button>
+            <div className="space-y-4">
+              <button
+                onClick={handleGetDiscount}
+                className="btn-primary w-full"
+              >
+                Get Discount Code
+              </button>
+              <a
+                href="https://www.instagram.com/altmeat_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-full flex items-center justify-center gap-2"
+              >
+                <FaInstagram className="text-xl" />
+                Follow us on Instagram
+              </a>
+            </div>
           ) : (
             <div className="space-y-4">
               <p className="text-sm text-gray-600">Your discount code:</p>

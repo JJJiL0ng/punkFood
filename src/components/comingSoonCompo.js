@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { FaInstagram } from 'react-icons/fa'
 
 export default function Sorry() {
   const [couponCode] = useState('PUNK4U')
@@ -40,6 +41,15 @@ export default function Sorry() {
             <p className="text-sm text-gray-500">
               Get 25% off on your first purchase when we launch!
             </p>
+            <a 
+              href="https://www.instagram.com/altmeat_official/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full flex items-center justify-center gap-2"
+            >
+              <FaInstagram className="text-xl" />
+              Follow us on Instagram
+            </a>
           </div>
         </div>
 
