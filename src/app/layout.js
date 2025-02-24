@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="theme-color" content="#FC7E7A" />
+        <meta name="theme-color" content="#FF0000" />
         <meta name="keywords" content="plant-based food, vegan restaurant, vegetarian food, healthy eating, PUNK FOOD, sustainable dining" />
         <meta property="og:title" content="PUNK FOOD - Plant-based Restaurant" />
         <meta property="og:description" content="At PUNK FOOD, we don't just go meatless—we go stronger. Experience revolutionary plant-based dining." />

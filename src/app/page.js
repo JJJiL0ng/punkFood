@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl space-y-6">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl space-y-4">
           <h2 className="text-2xl font-semibold text-gray-800">
             Get 25% Off<br />
             Your First Order
@@ -91,14 +91,14 @@ export default function Home() {
           {!couponVisible ? (
             <button
               onClick={handleGetDiscount}
-              className="btn-primary w-full"
+              className="btn-primary w-full mt-2"
             >
               Get Discount Code
             </button>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-3">
               <p className="text-sm text-gray-600">Your discount code:</p>
-              <div className="bg-gray-100 p-4 rounded-lg">
+              <div className="bg-gray-100 p-3 rounded-lg">
                 <p className="text-2xl font-mono font-bold text-red-500">
                   {couponCode}
                 </p>
